@@ -46,7 +46,7 @@ class App extends Component {
     Store vehicles state in a variable.
     Map over this variable to access the values needed to render.
     */
-    })
+
     return (
       <div className="App">
         {/*
