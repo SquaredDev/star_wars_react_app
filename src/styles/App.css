@@ -9,3 +9,21 @@
 .form{
   text-align: center;
 }
+
+.jumbotron {
+  text-align: center;
+
+
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+ .card {
+ background-color: rgb(236,238,239);
+ }
+
+.wrapper {
+}
