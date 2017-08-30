@@ -49,7 +49,6 @@ constructor(props){
           return response.json();
       })
       .then(data => {
-          console.log(data)
           this.setState({vehicles:data.results});
       })
   }
@@ -67,7 +66,7 @@ constructor(props){
     */
     return (
       <div className="App">
-        <div className="wrapper" style={{width: '75rem'}}>
+        <div className="wrapper">
           <div className="jumbotron">
             <h1>Star Wars</h1>
             <p>The Vehicles of Star Wars</p>
@@ -75,8 +74,8 @@ constructor(props){
             <div className="jumbotron">
               <div className="form">
                   <form onSubmit={this.handleFormSubmit}>
-                    <h3>What is your name, pilot?</h3>
-                    <input type="text" placeholder="Enter Your Name" onChange={this.handleNameChange} name="name" id="pilot"/><br />
+                    <h3>State your name, pilot?</h3>
+                    <input type="text" placeholder="Well?" onChange={this.handleNameChange} name="name" id="pilot"/><br />
                     <button onClick={this.handleFormSubmit}>Submit</button>
                     <p>{this.state.pilot}</p>
                   </form>
@@ -84,19 +83,19 @@ constructor(props){
             </div>
           <div className="container">
                   {this.state.vehicles.map(item => (
-                    <div className="card" style={{width:'20rem'}}>
+                    <div className="card">
                       <div className="card-block">
-                        <div className="wrapper" key={item.name}>
-                          <h4 class="card-title">Vehicle:{item.name}</h4>
-                          <div>Model:{item.model}</div>
-                            <div>Specs</div>
-                            <div>Manufacturer:{item.manufacturer}</div>
-                            <div>Class:{item.vehicle_class}</div>
-                            <div>passengers:{item.passengers}</div>
-                            <div>Crew:{item.crew}</div>
-                            <div>Lengeth:{item.length}</div>
-                            <div>Max Speed:{item.max_atmosphering_speed}</div>
-                            <div>Cargo Capacity:{item.cargo_capacity}</div>
+                        <div className="card-wrapper" key={item.name}>
+                          <h4 className="card-title">Vehicle: {item.name}</h4>
+                          <div>Model: {item.model}</div>
+                            <div>Specs;</div>
+                            <div>Manufacturer: {item.manufacturer}</div>
+                            <div>Class: {item.vehicle_class}</div>
+                            <div>Passengers: {item.passengers}</div>
+                            <div>Crew: {item.crew}</div>
+                            <div>Length: {item.length}</div>
+                            <div>Max Speed: {item.max_atmosphering_speed}</div>
+                            <div>Cargo Capacity: {item.cargo_capacity}</div>
                         </div>
                       </div>
                     </div>
